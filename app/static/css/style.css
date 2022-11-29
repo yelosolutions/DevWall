@@ -393,29 +393,30 @@ header .btn-group {
     #HERO SECTION
   \*-----------------------------------*/
 
-.hero {
+.hero1 {
     background: var(--background-primary);
     padding-top: 2rem;
     padding-bottom: var(--py);
     text-align: center;
+    height: 407px;
 }
 
-.hero .h1 {
+.hero1 .h1 {
     margin-bottom: 1rem;
     line-height: 1.6;
 }
 
-.hero b {
+.hero1 b {
     color: var(--accent);
     font-weight: inherit;
 }
 
-.hero .h3 {
+.hero1 .h3 {
     color: var(--foreground-secondary);
     margin-bottom: 2rem;
 }
 
-.hero .btn-group {
+.hero1 .btn-group {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -423,7 +424,7 @@ header .btn-group {
     text-align: center;
 }
 
-.hero .right {
+.hero1 .right {
     display: none;
 }
 
