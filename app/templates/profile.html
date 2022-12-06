@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>User Profile</h1>
+    <h2>Name: name</h2>
+    <h2>Location: location </h2>
+    <h2>Skills: skills</h2>
+    <h2>Interests: interests</h2>
+    <form action="/profile/update" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="name" >
+        <label>Location:</label>
+        <input type="text" name="location" placeholder="user location">
+        <label>Skills:</label>
+        <input type="text" name="skills" placeholder="user skills">
+        <label>Interests:</label>
+        <input type="text" name="interests" placeholder="user interests">
+        <button type="submit">Update Profile</button>
+    </form>
+{% endblock %}
