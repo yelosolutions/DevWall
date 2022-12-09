@@ -1,188 +1,190 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class="hero">
+        <div class="container">
+            <nav class="navbar">
 
-    <div class="container">
-        <nav class="navbar">
+                <a href="#">
+                    <img src="./static/images/logo21.png" alt="Devblog's logo" width="150" height="40"
+                        class="logo-light">
+                    <img src="./static/images/logo-dark.svg" alt="Devblog's logo" width="150" height="40"
+                        class="logo-dark">
+                </a>
 
-            <a href="#">
-                <img src="./static/images/logo21.png" alt="Devblog's logo" width="150" height="40"
-                    class="logo-light">
-                <img src="./static/images/logo-dark.svg" alt="Devblog's logo" width="150" height="40"
-                    class="logo-dark">
-            </a>
+                <div class="btn-group">
 
-            <div class="btn-group">
+                    <button class="theme-btn theme-btn-mobile light">
+                        <ion-icon name="moon" class="moon"></ion-icon>
+                        <ion-icon name="sunny" class="sun"></ion-icon>
+                    </button>
 
-                <button class="theme-btn theme-btn-mobile light">
-                    <ion-icon name="moon" class="moon"></ion-icon>
-                    <ion-icon name="sunny" class="sun"></ion-icon>
-                </button>
+                    <button class="nav-menu-btn">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </button>
 
-                <button class="nav-menu-btn">
-                    <ion-icon name="menu-outline"></ion-icon>
-                </button>
+                </div>
 
-            </div>
+                <div class="flex-wrapper">
+                    <ul class="desktop-nav">
 
-            <div class="flex-wrapper">
-                <ul class="desktop-nav">
-
-                    <li>
-                        <a href="#" class="nav-link">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="nav-link">Features</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="nav-link">Contact</a>
-                    </li>
-
-                </ul>
-
-                <button class="theme-btn theme-btn-desktop light">
-                    <ion-icon name="moon" class="moon"></ion-icon>
-                    <ion-icon name="sunny" class="sun"></ion-icon>
-                </button>
-
-            </div>
-
-            <div class="mobile-nav">
-
-                <button class="nav-close-btn">
-                    <ion-icon name="close-outline"></ion-icon>
-                </button>
-
-                <div class="wrapper">
-
-                    <p class="h3 nav-title">Main Menu</p>
-
-                    <ul>
-                        <li class="nav-item">
+                        <li>
                             <a href="#" class="nav-link">Home</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">About Me</a>
+                        <li>
+                            <a href="#" class="nav-link">Features</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li>
                             <a href="#" class="nav-link">Contact</a>
                         </li>
+
                     </ul>
+
+                    <button class="theme-btn theme-btn-desktop light">
+                        <ion-icon name="moon" class="moon"></ion-icon>
+                        <ion-icon name="sunny" class="sun"></ion-icon>
+                    </button>
 
                 </div>
 
-                <div>
+                <div class="mobile-nav">
 
-                    <p class="h3 nav-title">Topics</p>
+                    <button class="nav-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
 
-                    <ul>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Web Development</a>
-                        </li>
+                    <div class="wrapper">
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">DevOps</a>
-                        </li>
+                        <p class="h3 nav-title">Main Menu</p>
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">APIs</a>
-                        </li>
-                    </ul>
+                        <ul>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Home</a>
+                            </li>
 
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">About Me</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div>
+
+                        <p class="h3 nav-title">Topics</p>
+
+                        <ul>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Web Development</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">DevOps</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">APIs</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </nav>
+            
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container text-center">
+                    <h1 class="display-4">Connect with fellow developers</h1>
+                    <p class="lead">Join a community of developers where you can share your knowledge, learn new technologies and build your network</p>
+                    <a href="{{ url_for('signup') }}">
+                        <button class="btn btn-outline-success btn-sm">Sign Up Now</button>
+                    </a>
                 </div>
 
             </div>
 
-        </nav>
         
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container text-center">
-                <h1 class="display-4">Connect with fellow developers</h1>
-                <p class="lead">Join a community of developers where you can share your knowledge, learn new technologies and build your network</p>
-                <a href="{{ url_for('signup') }}">
-                    <button class="btn btn-outline-success btn-sm">Sign Up Now</button>
-                </a>
-            </div>
-
-        </div>
-        <div class="container">
-            <h2 class="text-center mb-5">Our Features</h2>
-            <div class="row">
-            <div class="col-lg-4">
-                <i class="fas fa-users fa-4x mb-4"></i>
-                <h3>Community</h3>
-                <p>Connect with other developers and build your network</p>
-            </div>
-            <div class="col-lg-4">
-                <i class="fas fa-chalkboard-teacher fa-4x mb-4"></i>
-                <h3>Learning</h3>
-                <p>Learn new technologies and stay up-to-date with the latest trends in the industry</p>
-            </div>
-            <div class="col-lg-4">
-                <i class="fas fa-code fa-4x mb-4"></i>
-                <h3>Collaboration</h3>
-                <p>Collaborate with other developers on projects and share your knowledge</p>
-            </div>
-            </div>
-        </div>
-        <div class="container-fluid bg-light py-5">
-            <h2 class="text-center mb-5">Pricing Plans</h2>
             <div class="container">
+                <h2 class="text-center mb-5">Our Features</h2>
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card mb-5 mb-lg-0">
-                            <div class="card-body">
-                                <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
-                                <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
-                                <hr>
-                                <ul class="fa-ul">
-                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Community access</li>
-                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Basic learning resources</li>
-                                    <li><span class="fa-li"><i class="fas fa-times"></i></span>Collaboration opportunities</li>
-                                </ul>
-                                <a href="{{ url_for('signup') }}" class="btn btn-block btn-primary text-uppercase">Sign Up</a>
+                <div class="col-lg-4">
+                    <i class="fas fa-users fa-4x mb-4"></i>
+                    <h3>Community</h3>
+                    <p>Connect with other developers and build your network</p>
+                </div>
+                <div class="col-lg-4">
+                    <i class="fas fa-chalkboard-teacher fa-4x mb-4"></i>
+                    <h3>Learning</h3>
+                    <p>Learn new technologies and stay up-to-date with the latest trends in the industry</p>
+                </div>
+                <div class="col-lg-4">
+                    <i class="fas fa-code fa-4x mb-4"></i>
+                    <h3>Collaboration</h3>
+                    <p>Collaborate with other developers on projects and share your knowledge</p>
+                </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-light py-5">
+                <h2 class="text-center mb-5">Pricing Plans</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card mb-5 mb-lg-0">
+                                <div class="card-body">
+                                    <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+                                    <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
+                                    <hr>
+                                    <ul class="fa-ul">
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Community access</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Basic learning resources</li>
+                                        <li><span class="fa-li"><i class="fas fa-times"></i></span>Collaboration opportunities</li>
+                                    </ul>
+                                    <a href="{{ url_for('signup') }}" class="btn btn-block btn-primary text-uppercase">Sign Up</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card mb-5 mb-lg-0">
-                            <div class="card-body">
-                                <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
-                                <h6 class="card-price text-center">$15<span class="period">/month</span></h6>
-                                <hr>
-                                <ul class="fa-ul">
-                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Community access</li>
-                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Advanced learning resources</li>
-                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Collaboration opportunities</li>
-                                </ul>
-                                <a href="{{ url_for('signup') }}" class="btn btn-block btn-primary text-uppercase">Sign Up</a>
+                        <div class="col-lg-4">
+                            <div class="card mb-5 mb-lg-0">
+                                <div class="card-body">
+                                    <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+                                    <h6 class="card-price text-center">$15<span class="period">/month</span></h6>
+                                    <hr>
+                                    <ul class="fa-ul">
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Community access</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Advanced learning resources</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Collaboration opportunities</li>
+                                    </ul>
+                                    <a href="{{ url_for('signup') }}" class="btn btn-block btn-primary text-uppercase">Sign Up</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title text-muted text-uppercase text-center">Enterprise</h5>
-                                <h6 class="card-price text-center">$30<span class="period">/month</span></h6>
-                                <hr>
-                                <ul class="fa-ul">
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Community access</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Expert learning resources</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Exclusive collaboration opportunities</li>
-                                </ul>
-                                <a href="{{ url_for('signup') }}" class="btn btn-block btn-primary text-uppercase">Sign Up</a>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title text-muted text-uppercase text-center">Enterprise</h5>
+                                    <h6 class="card-price text-center">$30<span class="period">/month</span></h6>
+                                    <hr>
+                                    <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Community access</li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Expert learning resources</li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Exclusive collaboration opportunities</li>
+                                    </ul>
+                                    <a href="{{ url_for('signup') }}" class="btn btn-block btn-primary text-uppercase">Sign Up</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-        
+    </div>        
 {% endblock %}
 
 
