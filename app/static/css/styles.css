@@ -1,0 +1,21 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 1rem;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}

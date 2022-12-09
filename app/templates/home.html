@@ -1,44 +1,437 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>DevWall - Home</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">DevWall</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Search</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-            </ul>
+{% extends 'base.html' %}
+{% block content %}
+    
+    <main>
+        <div class="main">
+
+            <div class="container">
+
+                <!--
+            - BLOG SECTION
+            -->
+
+                <div class="blog">
+
+                    <h2 class="h2">Latest Blog Post</h2>
+
+                    <div class="blog-card-group">
+
+                        <div class="blog-card">
+
+                            <div class="blog-card-banner">
+                                <img src="./static/images/Devv1.png"
+                                    alt="Building microservices with Dropwizard, MongoDB & Docker" width="250"
+                                    class="blog-banner-img">
+                            </div>
+
+                            <div class="blog-content-wrapper">
+
+                                <button class="blog-topic text-tiny">Web Development</button>
+
+                                <h3>
+                                    <a href="#" class="h3">
+                                        What it takes to create a functioning web application
+                                    </a>
+                                </h3>
+
+                                <p class="blog-text">
+                                    Web application development presents a novel approach to work creating dynamic web pages.
+                                    As a modern approach to create efficient digital solutions, web applications today have 
+                                    become more interactive, engaging, and efficient.
+                                    The development scenario around these applications has been difficult to approach.
+                                    But with the introduction of todays development frameworks creating a web application 
+                                    has become relatively easier and quicker.
+                                </p>
+
+                                <div class="wrapper-flex">
+
+                                    <div class="profile-wrapper">
+                                        <img src="./static/images/author1.png" alt="Julia Walker" width="50">
+                                    </div>
+
+                                    <div class="wrapper">
+                                        <a href="#" class="h4">Joseph Rono</a>
+
+                                        <p class="text-sm">
+                                            <time datetime="2022-01-17">Dec 17, 2022</time>
+                                            <span class="separator"></span>
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <time datetime="PT3M">3 min</time>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="blog-card">
+
+                            <div class="blog-card-banner">
+                                <img src="./static/images/mysql.png"
+                                    alt="Dynamically Securing Databases using Hashicorp Vault" width="250"
+                                    class="blog-banner-img">
+                            </div>
+
+                            <div class="blog-content-wrapper">
+
+                                <button class="blog-topic text-tiny">Databases</button>
+
+                                <h3><a href="" class="h3">What you should know about MySQL</a></h3>
+
+                                <p class="blog-text">
+                                    MySQL is currently the most popular database management system software used for 
+                                    managing the relational database. 
+                                    It is open-source database software, which is supported by Oracle Company. 
+                                    It is fast, scalable, and easy to use database management system in comparison 
+                                    with Microsoft SQL Server and Oracle Database. 
+                                    It is commonly used in conjunction with PHP scripts for creating powerful and 
+                                    dynamic server-side or web-based enterprise applications.
+                                </p>
+
+                                <div class="wrapper-flex">
+
+                                    <div class="profile-wrapper">
+                                        <img src="./static/images/author1.png" alt="Jay" width="50">
+                                    </div>
+
+                                    <div class="wrapper">
+                                        <a href="#" class="h4">Joseph Rono</a>
+
+                                        <p class="text-sm">
+                                            <time datetime="2021-11-20">Mar 20, 2022</time>
+                                            <span class="separator"></span>
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <time datetime="PT4M">4 min</time>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="blog-card">
+
+                            <div class="blog-card-banner">
+                                <img src="./static/images/connect.png"
+                                    alt="Don't Develop Just for Yourself - A Developer's Checklist to Accessibility"
+                                    width="250" class="blog-banner-img">
+                            </div>
+
+                            <div class="blog-content-wrapper">
+
+                                <button class="blog-topic text-tiny">Connect and Grow!</button>
+
+                                <h3><a href="" class="h3">Don't Just for Code by Yourself, Find a Community an Connect
+                                    With Other Techies
+                                </a>
+                                </h3>
+
+                                <p class="blog-text">
+                                    As tech persons we tend to be close to our computers as compared to our relationships
+                                    with people. We forget that we are social beings and community is a what holds a human
+                                    being.
+                                </p>
+
+                                <div class="wrapper-flex">
+
+                                    <div class="profile-wrapper">
+                                        <img src="./static/images/author1.png" alt="Jay" width="50">
+                                    </div>
+
+                                    <div class="wrapper">
+                                        <a href="#" class="h4">Joseph Rono</a>
+
+                                        <p class="text-sm">
+                                            <time datetime="2021-10-25">Oct 25, 2021</time>
+                                            <span class="separator"></span>
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <time datetime="PT7M">7 min</time>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="blog-card">
+
+                            <div class="blog-card-banner">
+                                <img src="./static/images/Rest1.png"
+                                    alt="Building a Restful CRUD API with Node JS, Express, and MongoDB" width="250"
+                                    class="blog-banner-img">
+                            </div>
+
+                            <div class="blog-content-wrapper">
+
+                                <button class="blog-topic text-tiny">APIs</button>
+
+                                <h3><a href="" class="h3">Building a RESTFUL API</a></h3>
+
+                                <p class="blog-text">
+                                    Application Programming Interface is the abbreviation for API. An API is a software
+                                    interface that
+                                    enables two apps to
+                                    communicate with one another. In other words, an API is a messenger that sends your
+                                    request to the
+                                    provider and then
+                                    returns the response to you.
+                                </p>
+
+                                <div class="wrapper-flex">
+
+                                    <div class="profile-wrapper">
+                                        <img src="./static/images/author1.png" alt="Jay" width="50">
+                                    </div>
+
+                                    <div class="wrapper">
+                                        <a href="#" class="h4">Joseph Rono</a>
+
+                                        <p class="text-sm">
+                                            <time datetime="2021-10-15">Oct 15, 2021</time>
+                                            <span class="separator"></span>
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <time datetime="PT5M">5 min</time>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="blog-card">
+
+                            <div class="blog-card-banner">
+                                <img src="./static/images/blog-8.png"
+                                    alt="Monitoring Performance with the PageSpeed Insights API" width="250"
+                                    class="blog-banner-img">
+                            </div>
+
+                            <div class="blog-content-wrapper">
+
+                                <button class="blog-topic text-tiny">Python</button>
+
+                                <h3><a href="" class="h3">Welcome to the Python blog</a>
+                                </h3>
+
+                                <p class="blog-text">
+                                    Here you will find information about the Python 
+                                    programming language, from basic tutorials to more advanced topics. 
+                                    Whether you are a beginner or an experienced programmer, 
+                                    you can use this blog to stay up to date with new and 
+                                    exciting developments in the Python community. 
+                                    We will be exploring the various features of Python, 
+                                    as well as discussing best practices and tips for writing better Python code.
+                                </p>
+
+                                <div class="wrapper-flex">
+
+                                    <div class="profile-wrapper">
+                                        <img src="./static/images/author1.png" alt="Jay" width="50">
+                                    </div>
+
+                                    <div class="wrapper">
+                                        <a href="#" class="h4">Joseph Rono</a>
+
+                                        <p class="text-sm">
+                                            <time datetime="2021-10-03">Oct 3, 2021</time>
+                                            <span class="separator"></span>
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <time datetime="PT5M">5 min</time>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="blog-card">
+
+                            <div class="blog-card-banner">
+                                <img src="./static/images/devops.png"
+                                    alt="How to connect a React frontend with a NodeJS/Express backend" width="250"
+                                    class="blog-banner-img">
+                            </div>
+
+                            <div class="blog-content-wrapper">
+
+                                <button class="blog-topic text-tiny">DevOPs</button>
+
+                                <h3><a href="" class="h3">How to use DevOps in project management </a></h3>
+
+                                <p class="blog-text">
+                                    DevOps is an approach to software development that extends the principles of
+                                    agile development
+                                    It integrates both the development and operations units of the IT team into 
+                                    one homogenous unit. 
+                                    This integration enables a more seamless flow between the traditionally siloed 
+                                    sides of the software development lifecycle
+                                </p>
+
+                                <div class="wrapper-flex">
+
+                                    <div class="profile-wrapper">
+                                        <img src="./static/images/author1.png" alt="Jay" width="50">
+                                    </div>
+
+                                    <div class="wrapper">
+                                        <a href="#" class="h4">Joseph Rono</a>
+
+                                        <p class="text-sm">
+                                            <time datetime="2021-09-21">Aug 21, 2021</time>
+                                            <span class="separator"></span>
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <time datetime="PT4M">4 min</time>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="btn load-more">Load More</button>
+
+                </div>
+
+
+
+
+
+                <!--
+                - ASIDE
+                -->
+
+                <div class="aside">
+
+                    <div class="topics">
+
+                        <h2 class="h2">Topics</h2>
+
+
+                        <a href="#" class="topic-btn">
+                            <div class="icon-box">
+                                <ion-icon name="server-outline"></ion-icon>
+                            </div>
+
+                            <p>Web Development</p>
+                        </a>
+
+                        <a href="#" class="topic-btn">
+                            <div class="icon-box">
+                                <ion-icon name="accessibility-outline"></ion-icon>
+                            </div>
+
+                            <p>DevOPs</p>
+                        </a>
+
+                        <a href="#" class="topic-btn">
+                            <div class="icon-box">
+                                <ion-icon name="rocket-outline"></ion-icon>
+                            </div>
+
+                            <p>Performance</p>
+                        </a>
+
+                    </div>
+
+                    <div class="tags">
+
+                        <h2 class="h2">Tags</h2>
+
+                        <div class="wrapper">
+
+                            <button class="hashtag">#flask</button>
+                            <button class="hashtag">#python</button>
+                            <button class="hashtag">#ecommerce</button>
+                            <button class="hashtag">#devops</button>
+                            <button class="hashtag">#webdesign</button>
+                            <button class="hashtag">#seo</button>
+                            <button class="hashtag">#javascript</button>
+                            <button class="hashtag">#performance</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact">
+
+                        <h2 class="h2">Let's Connect</h2>
+
+                        <div class="wrapper">
+
+                            <p>
+                                Would you like to work or collaborate with me? Lets connect.
+                            </p>
+
+                            <ul class="social-link">
+
+                                <li>
+                                    <a href="#" class="icon-box discord">
+                                        <ion-icon name="logo-discord"></ion-icon>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="icon-box twitter">
+                                        <ion-icon name="logo-twitter"></ion-icon>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="icon-box facebook">
+                                        <ion-icon name="logo-facebook"></ion-icon>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="newsletter">
+
+                        <h2 class="h2">Newsletter</h2>
+
+                        <div class="wrapper">
+
+                            <p>
+                                Subscribe to our newsletter to be among the first to keep up with the latest updates.
+                            </p>
+
+                            <form action="#">
+                                <input type="email" name="email" placeholder="Email Address" required>
+
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-    </nav>
-    <div class="container mt-3">
-    <h1>Recent Posts</h1>
-    {% for post in posts %}
-    <div class="card mb-3">
-        <div class="card-body">
-            <h5 class="card-title"><a href="/post/{{ post.id }}">{{ post.title }}</a></h5>
-            <h6 class="card-subtitle mb-2 text-muted">by {{ post.author.username }}</h6>
-            <p class="card-text">{{ post.content | truncate(200) }}</p>
-            <a href="/post/{{ post.id }}" class="card-link">Read more</a>
-        </div>
-    </div>
-    {% endfor %}
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-</body>
+        
+    </main>
+{% endblock %}

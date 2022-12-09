@@ -2,7 +2,7 @@ from flask import render_template, url_for
 from app import app, db
 from flask import render_template, redirect, url_for
 from flask_login import login_required, current_user
-from .models import User
+from .models import User, Post
 
 @app.route('/index')
 def index():
