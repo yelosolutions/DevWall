@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- The user's name and profile picture -->
+<h1>{{ user.name }}</h1>
+<img src="{{ user.profile_pic }}" alt="{{ user.name }}" />
+
+<!-- The user's portfolio items -->
+<h2>Portfolio</h2>
+<ul>
+{% for item in portfolio_items %}
+    <li>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        <img src="{{ item.image }}" alt="{{ item.title }}" />
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

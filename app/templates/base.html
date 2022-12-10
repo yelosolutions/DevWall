@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DevWall - Developer's Personal Blog</title>
+        <title>DevWall - Developer's Site</title>
     
         <!--
             - favicon
@@ -15,6 +15,7 @@
         <!--
             - custom css link
         -->
+        <link rel="stylesheet" href="./static/css/style.css">
         <link rel="stylesheet" href="./static/css/style.min.css">
     
         <!--
@@ -38,7 +39,7 @@
             <div class="container">
                 <nav class="navbar">
     
-                    <a href="#">
+                    <a href="{{ url_for('home') }}">
                         <img src="./static/images/logo-light.svg" alt="Devblog's logo" width="150" height="40"
                             class="logo-light">
                         <img src="./static/images/logo-dark.svg" alt="Devblog's logo" width="150" height="40"
@@ -60,18 +61,23 @@
     
                     <div class="flex-wrapper">
                         <ul class="desktop-nav">
-    
+                            {% if current_user.is_anonymous %}
                             <li>
-                                <a href="#" class="nav-link">Home</a>
+                                <a href="{{ url_for('login') }}" class="nav-link">Login</a>
+                            </li>
+                            {% else %}
+                            <li>
+                                <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url_for('profile') }}" class="nav-link">Profile</a>
                             </li>
     
                             <li>
-                                <a href="#" class="nav-link">Search</a>
+                                <a href="{{ url_for('index') }}" class="nav-link">Posts</a>
                             </li>
-    
-                            <li>
-                                <a href="#" class="nav-link">Login</a>
-                            </li>
+                            {% endif %}
     
                         </ul>
     
@@ -94,15 +100,15 @@
     
                             <ul>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Home</a>
+                                    <a href="{{ url_for('home') }}" class="nav-link">Home</a>
                                 </li>
     
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Login</a>
+                                    <a href="{{ url_for('home') }}" class="nav-link">Login</a>
                                 </li>
     
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Contact</a>
+                                    <a href="{{ url_for('home') }}" class="nav-link">Contact</a>
                                 </li>
                             </ul>
     
@@ -156,14 +162,14 @@
                 <div class="wrapper">
     
                     <a href="#" class="footer-logo">
-                        <img src="./static/images/logo2.pn" alt="DevWall's Logo" width="150" height="40"
+                        <img src="./static/images/logo-light.svg" alt="DevWall's Logo" width="150" height="40"
                             >
-                        <img src="./static/images/logo-dark.svg" alt="DevWall's Logo" width="150" height="40"
+                        <img src="./static/images/logo-light.svg" alt="DevWall's Logo" width="150" height="40"
                             class="logo-dark">
                     </a>
     
                     <p class="footer-text">
-                        Learn about Web accessibility, Web performance, and Database management.
+                        Connect with fellow developers and showcase your projects.
                     </p>
     
                 </div>
@@ -245,6 +251,20 @@
                     mode = 'dark'
                 }
             })
+        </script>
+        <script>
+            // Add a hover effect to the portfolio items
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            portfolioItems.forEach(item => {
+                item.addEventListener('mouseover', () => {
+                    item.classList.add('highlight');
+                });
+
+                item.addEventListener('mouseout', () => {
+                    item.classList.remove('highlight');
+                    });
+            });
         </script>
     </body>
 </html>

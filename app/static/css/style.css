@@ -73,6 +73,17 @@
 
 
 
+.portfolio-item {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+/* Style the highlight effect */
+.highlight {
+    box-shadow: 0 0 10px #333;
+}
+
+
 /*-----------------------------------*\ 
     #RESET
   \*-----------------------------------*/
