@@ -25,6 +25,13 @@ def profile():
 def landing():
     return render_template('landing.html', title='landing page')
 
+@app.route('/')
+@app.route('/home')
+def home():
+    #posts = Post.query.order_by(Post.timestamp.desc()).limit(10).all()
+    return render_template('home.html', title='Home')
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -32,29 +39,43 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
-        if user is None or not user.check_password(form.password.data):
-            flash('Invalid username or password')
-            return redirect(url_for('login'))
+        #if user is None or not user.check_password(form.password.data):
+         #   flash('Invalid username or password')
+          #  return redirect(url_for('home'))
         login_user(user, remember=form.remember_me.data)
-        next_page = request.args.get('next')
-        if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for('')
-        return redirect(next_page)
+        return redirect(url_for('home'))
+
+        #next_page = request.args.get('next')
+        
+        #if not next_page or url_parse(next_page).netloc != '':
+         #   next_page = url_for('home')
+        
+        #if next_page and url_parse(next_page).netloc == '':
+         #   return redirect(next_page)
+        #else:
+         #   flash('Invalid redirect URL')
+          #  return redirect(url_for('home'))
+
     return render_template('login.html', title='Sign in', form=form)
 
 
 
-
-@app.route('/signup')
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    return render_template('signup.html', title='signup')
+    #if current_user.is_authenticated:
+     #   return redirect(url_for('index'))
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        user = User(username=form.username.data, email=form.email.data)
+        user.set_password(form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        flash('Congratulations, you are now a registered user!')
+        return redirect(url_for('login'))
+    return render_template('signup.html', title='Sign Up', form=form)
 
-@app.route('/')
-@app.route('/home')
-@login_required
-def home():
-    posts = Post.query.order_by(Post.timestamp.desc()).limit(10).all()
-    return render_template('home.html', posts=posts)
+
+
 
 @app.route('/user/<username>')
 def user_profile(username):
@@ -73,7 +94,7 @@ def post(post_id):
 @app.route('/portfolio/<username>')
 def portfolio(username):
     user = User.query.filter_by(username=username).first_or_404()
-    portfolio = user.portfolio.order_by(Portfolio.title).all()
+    #portfolio = user.portfolio.order_by(Portfolio.title).all()
     return render_template('portfolio.html', user=user, portfolio=portfolio)
 
 @app.route('/follow/<username>')
@@ -105,11 +126,6 @@ def search():
     tags = Tag.query.filter(Tag.name.contains(query)).all()
     return render_template('search.html', query=query, users=users, posts=posts, tags=tags)
 
-@app.route('/admin')
-@login_required
-def admin():
-    # Admin controls go here
-    return render_template('admin.html')
 
 @app.route('/logout')
 def logout():

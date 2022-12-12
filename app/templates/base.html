@@ -65,7 +65,7 @@
                             <li>
                                 <a href="{{ url_for('login') }}" class="nav-link">Login</a>
                             </li>
-                            {% else %}
+                            {% else%}
                             <li>
                                 <a href="{{ url_for('home') }}" class="nav-link">Home</a>
                             </li>
@@ -76,6 +76,14 @@
     
                             <li>
                                 <a href="{{ url_for('index') }}" class="nav-link">Posts</a>
+                            </li>
+                            
+                            <li>
+                                <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url_for('portfolio', username=current_user.username) }}" class="nav-link">Portfolio</a>
                             </li>
                             {% endif %}
     

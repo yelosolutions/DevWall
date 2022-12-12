@@ -1,37 +1,63 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="profile shadow-lg p-3  mx-5 mb-5 bg-body rounded" >
-        <img src="{{ url_for('static', filename='images/profile1.jpg') }}" class="rounded" style = "width: 100%" alt="boy profile">
+<main>
+
+    <!--
+    - #HERO SECTION
+    -->
+
+    <div class="hero">
+
         <div class="container">
-            <p>ID: {{ current_user.id }}</p>
-            <p>NAME: {{ current_user.username }}</p>
-            <p>
-                Email: {{ current_user.email }}
-                <i class="bx bx-envelope"></i>
-            </p>
-            <p>
-                Date and Time added : {{ current_user.date_added }}
-                <i class="bx bx-calendar"></i>
-            </p>
-        </div>        
+
+            <div class="left">
+
+                <h1 class="h1">
+                    Hi, I'm <b>Joseph&nbsp;Rono</b>.
+                    <br>Web Developer
+                </h1>
+
+                <p class="h3">
+                    I have specialised is Ecommerce web development.
+                </p>
+
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Contact Me</a>
+                    <a href="#" class="btn btn-secondary">About Me</a>
+                </div>
+
+            </div>
+
+            <div class="right">
+
+                <div class="pattern-bg"></div>
+                <div class="img-box">
+                    <img src="./static/images/hero1.png" alt="Joseph Rono" class="hero1-img">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="profile shadow-lg p-3  mx-5 mb-5 bg-body rounded" >
+        
+        <table>
+            <tr valign="top">
+                <td><img src="{{ current_user.avatar(128) }}"></td><br>
+                
+            </tr>
+        </table>
+        <div>
+            <h4>User: {{ current_user.username }}</h4>
+            <h4>Id: {{ current_user.id }}</h4>
+            <h4>Email: {{ current_user.email }}</h4>
+        </div>     
     </div>
     <br><br>
-
-    <h1>User Profile</h1>
-    <h2>Name: name</h2>
-    <h2>Location: location </h2>
-    <h2>Skills: skills</h2>
-    <h2>Interests: interests</h2>
-    <form action="/profile/update" method="POST">
-        <label>Name:</label>
-        <input type="text" name="name" placeholder="name" >
-        <label>Location:</label>
-        <input type="text" name="location" placeholder="user location">
-        <label>Skills:</label>
-        <input type="text" name="skills" placeholder="user skills">
-        <label>Interests:</label>
-        <input type="text" name="interests" placeholder="user interests">
-        <button type="submit">Update Profile</button>
-    </form>
+</main>
 {% endblock %}

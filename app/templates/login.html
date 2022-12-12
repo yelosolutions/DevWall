@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 
-{% block content %}
-        
+{% block content %}        
         <div class="container mt-5">
             <h1 class="text-center mb-4">Sign In</h1>
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     
-                    <form method="POST">
+                    <form action="" method="POST">
                         <div class="shadow-lg p-3 mb-5 bg-body rounded">
                             <img src="{{ url_for('static', filename='images/logo-light.svg') }}" class="img-align: centre" style= "width:200px" alt="logo">
                             <br/>
@@ -37,7 +36,7 @@
                             <p> {{ form.submit(class="btn btn-outline-info") }}</p>
                             <p>
                                 New User?
-                                <a href="#"> Click to Register!</a>
+                                <a href="{{ url_for('signup') }}"> Click to Register!</a>
                             </p>
                         </div>
                     </form>
