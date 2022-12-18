@@ -33,31 +33,33 @@
 
                 <div class="pattern-bg"></div>
                 <div class="img-box">
-                    <img src="./static/images/hero1.png" alt="Joseph Rono" class="hero1-img">
+                    <img src="./static/images/hero2.png" alt="Joseph Rono" class="hero-img">
                     <div class="shape shape-1"></div>
                     <div class="shape shape-2"></div>
                 </div>
+                
 
             </div>
 
         </div>
-
-    </div>
-
-    <div class="profile shadow-lg p-3  mx-5 mb-5 bg-body rounded" >
+        <div class="profile shadow-lg p-3  mx-5 mb-5 bg-body rounded" >
         
-        <table>
-            <tr valign="top">
-                <td><img src="{{ current_user.avatar(128) }}"></td><br>
-                
-            </tr>
-        </table>
-        <div>
-            <h4>User: {{ current_user.username }}</h4>
-            <h4>Id: {{ current_user.id }}</h4>
-            <h4>Email: {{ current_user.email }}</h4>
-        </div>     
+            <table>
+                <tr valign="top">
+                    <td><img src="{{ current_user.avatar(128) }}"></td><br>
+                    
+                </tr>
+            </table>
+            <div>
+                <h1 class="h1">User: {{ current_user.username }}</h1>
+                <h1 class="h1">Id: {{ current_user.id }}</h1>
+                <h1 class="h1">Email: {{ current_user.email }}</h1>
+            </div>     
+        </div>
+        <br><br>
+
     </div>
-    <br><br>
+
+    
 </main>
 {% endblock %}
